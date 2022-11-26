@@ -1,0 +1,32 @@
+<%- include('partials/header2') -%>
+    <main id="main1">
+        <h3>Login</h3>
+        <section id="signupSection">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <form action="/login" method="POST">
+                <input class="inputForm" type="email" name="email" placeholder="Email">
+                <input class="inputForm" type="password" name="password" placeholder="Password">
+                <input class="submitButton" type="submit">
+            </form>
+            <h3>Don't have an account?</h3>
+            <form action="/signup">
+                <button id="signupButton">Signup</button>
+            </form>
+            <form action="/login" method="POST" class="w-full">
+                <button id="guestButton" type="submit" class="text-center w-full underline">Guest Login</button>
+				<input type="text" id="email" name="email" class="form-control hidden" value="test@test.com">
+				<input type="password" id="password" name="password" class="form-control hidden " value="password">
+			</form>
+
+        </section>
+    </main>
+<%- include('partials/footer') -%>

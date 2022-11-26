@@ -1,0 +1,527 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+     width: 100%;
+     display: block;
+     font-size: 62.5%;
+     /* background-image: url(/public/images/bg-phone.jpg); */
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+body {
+     padding: 1rem .5rem;
+     font-family: 'Oswald', sans-serif;
+     background: rgb(255,36,0);
+     background: linear-gradient(90deg, rgba(255,36,0,0.60) 0%, rgba(143,0,255,0.60) 100%);
+}
+header {
+     padding: 0 1.5rem;
+}
+.topBar {
+     /* background: rgb(146,227,252);
+     background: linear-gradient(90deg, rgba(146,227,252,1) 0%, rgba(190,239,255,1) 17%, rgba(190,239,255,1) 78%, rgba(146,227,252,1) 100%); */
+     margin-top: 0;
+     display: flex;
+     position: relative;
+}
+#headerTopLeft {
+     width: 50%;
+     padding: 1% 0 1% 1%;
+}
+#headerTopRight {
+     width: 50%;
+     text-align: right;
+     padding: 0 3rem 1% 0;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+}
+#headerImg {
+     width: 100px;
+     /* display: block; */
+     /* margin-right: auto; */
+}
+h3 {
+     font-size: 2.25rem;
+     margin-bottom: 1rem;
+}
+a {
+     font-size: 2rem;
+     
+}
+
+
+/* ************ Index ***************** */
+#main1 {
+     width: 95%;
+     margin: 1.5rem auto;
+     padding: 20px;
+     background: rgba(255, 255, 255, 0.503);
+     border-radius: 2rem;
+     
+}
+
+#main1 p {
+     font-size: 1.75rem;
+     line-height: 1.5;
+     margin: 2rem 0;
+     width: 99%;
+}
+
+.hidden {
+     visibility: hidden;
+}
+#loginButton, #signupButton, #guestButton, .submitButton, #clearTasks {
+     background-color: #ff22007e;
+     border: 2px solid #8f00ff;
+     border-radius: 30px;
+     box-shadow: #422800 4px 4px 0 0;
+     color: #422800;
+     cursor: pointer;
+     display: inline-block;
+     font-weight: 600;
+     font-size: 18px;
+     padding: 0 18px;
+     line-height: 50px;
+     text-align: center;
+     text-decoration: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+}
+     
+#loginButton:hover, #signupButton:hover {
+     background-color: #fff;
+}
+
+#loginButton:active, #signupButton:active {
+     box-shadow: #2f2f2f 2px 2px 0 0;
+     transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+     #loginButton, #signupButton {
+     min-width: 120px;
+     padding: 0 25px;
+     }
+}  
+/* ************ Login ***************** */
+
+
+/* ************ Signup ***************** */
+#signupSection {
+     margin: 2rem;
+     padding: 2rem;
+     margin: 1rem auto;
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     align-items: center;
+}
+#signupSection form {
+     margin: 0 auto;
+     padding: 2rem;
+     align-items: center;
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     align-items: center;
+     
+}
+.inputForm {
+     margin: 1rem auto;
+     width: 25rem;
+     height: 5rem;
+     border-radius: .5rem;
+}
+#main1 h3 {
+     width: 100%;
+     text-align: center;
+}
+
+/* ************            ************* */
+#clear {
+     width: 100%;
+}
+#clearTasks {
+     width: 50%;
+     height: 15%;
+     font-size: 2rem;
+}
+main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     width: 100%;
+     margin-top: 1rem;
+
+}
+
+#collectionText {
+     width: 100%;
+     text-align: center;
+     font-size: 6rem;
+     margin: .5%;
+}
+#percent {
+     width: 100%;
+     text-align: center;
+     font-size: 4rem;
+     margin: .5%;
+}
+#file {
+     width: 80%;
+     margin: 0 auto;
+     height: 50px;
+}
+div {
+     width: 100px;
+     height: 100px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     text-align: center;
+     font-size: 2rem;
+     margin: .1rem;
+     padding: 5px;
+     border-radius: 15%;
+}
+div img {
+     height: 60%;
+     width: 60%;
+     margin: 2% 15%;
+}
+div h4 {
+     width: 100%;
+     font-size: 1.5rem;
+     font-weight: 900;
+     flex: 1 0 100%;
+
+}
+.true {
+     background: rgb(255,36,0);
+     background: radial-gradient(circle, rgba(255,36,0,0.50) 0%, rgba(143,0,255,0.50) 90%);
+     box-shadow: 5px 5px 5px rgb(62, 80, 62);
+     color: rgb(238, 237, 237);
+}
+
+.Scarlet, .Violet {
+     border-radius: 15%;
+}
+
+.Scarlet {
+     border: 2px solid red;
+}
+.Violet {
+     border: 2px solid purple;
+}
+
+.note {
+     text-align: center;
+     line-height: 3rem;
+}
+
+.dexNumber {
+     font-size: 1rem;
+}
+
+#shoutOut {
+     text-align: center;
+}
+
+/* ************SECTION TABS************* */
+.mytabs {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     max-width: 99%;
+     margin: 10px auto;
+     padding: 1rem;
+     font-size: 2rem;
+}
+.mytabs input[type="radio"] {
+     display: none;
+     font-size: 2rem;
+}
+.mytabs label {
+     padding: 8px;
+     background: rgba(97, 97, 97, 0.503);
+     font-weight: bold;
+     font-size: 2rem;
+}
+.mytabs .tab {
+     width: 100%;
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.503);
+     order: 1;
+     display: none;
+     border-radius: 0;
+     border: 2px solid gold;
+}
+.mytabs .tab h2 {
+     font-size: 3rem;
+     text-align: center;
+}
+.mytabs .tab h2:not(:first-child) {
+     border-top: 1px solid black;
+     padding-top: 2rem;
+     margin-top: 2rem;
+}
+.mytabs input[type="radio"]:checked + label + .tab {
+     display: block;
+}
+.mytabs input[type="radio"]:checked + label {
+     background: white;
+     box-shadow: 2px 3px 5px rgb(70, 70, 70);
+     z-index: 6;
+}
+
+#toolsMain1 h4 {
+     margin-bottom: 2rem;
+}
+
+.toolsTitle {
+     width: 100%;
+     text-align: center;
+     margin-top: 3rem;
+}
+
+.wrapper {
+     display: inline-block;
+     width: 100%;
+}
+
+#typeChart {
+     width: 100%;
+     object-fit: contain !important;
+}
+
+li {
+     text-align: center;
+     margin: 1rem;
+}
+
+/* ************PROGRESS BARS************* */
+
+
+.progressMain {
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     
+}
+.progressLabel {
+     background: none !important;
+     width: 100%;
+}
+progress {
+     margin-top: .25rem;
+     margin-bottom: 1rem;
+     height: 5rem;
+     width: 35rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+#collectionText, #percent {
+     background: none;
+     font-size: 2rem;
+}
+
+#footerDiv {
+     display: flex;
+     justify-content: flex-end;
+     align-items: right;
+     width: 100%;
+     margin: 30px 0;
+     padding: 0 10px;
+}
+#footerDiv p {
+     font-size: 2rem;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media (min-width: 600px) {
+     body {
+          padding: 0 8%;
+     }
+     div {
+          width: 10rem;
+          height: 10rem;
+     }
+     div img {
+          width: 3em;
+          height: 3em;
+     }
+     div h4 {
+          font-size: .7em;
+     }
+     #clearTasks {
+          width: 40%;
+     }
+}
+
+@media (min-width: 800px) {
+     body {
+          padding: 0 8%;
+     }
+     div {
+          width: 20rem;
+          height: 20rem;
+     }
+     div img {
+          width: 7em;
+          height: 7em;
+     }
+     div h4 {
+          font-size: 1em;
+     }
+     #headerImg {
+          width: 15rem;
+     }
+     #clearTasks {
+          width: 35%;
+     }
+}
+
+@media (min-width: 1100px) {
+     body {
+          padding: 0 8%;
+     }
+     div {
+          width: 20rem;
+          height: 20rem;
+     }
+     div img {
+          width: 7em;
+          height: 7em;
+     }
+     div h4 {
+          font-size: 1em;
+     }
+     #headerImg {
+          width: 20rem;
+     }
+     #clearTasks {
+          width: 20%;
+     }
+}
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 10; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   
+   /* Modal Content/Box */
+   .modal-content {
+     background-color: #fefefe;
+     margin: 15% auto; /* 15% from the top and centered */
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%; /* Could be more or less, depending on screen size */
+   }
+   
+   /* The Close Button */
+   .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+   }

@@ -1,0 +1,148 @@
+<%- include('partials/header') -%>
+
+    <main class="navBar">
+		<nav class="mytabs">
+
+                <!--**********DAILY TASKS************-->
+                <input type="radio" id="tasksTab" name="mytabs" checked="checked">
+                <label for="tasksTab">Tasks</label>
+                <section class="tab">
+                    <h2>Daily Tasks</h2>
+                    <!--********TRACKER*************-->
+                    <main id="clear">
+                        <button id="clearTasks">Clear Tasks</button>
+                    </main>
+                    <main class="progressMain" id="taskProgressMain">
+                        <label for="file" class="progressLabel">Progress: <span id="taskPercent"></span> /6</label>
+                        <progress id="taskProgress" max="6" value="0"></progress>
+                    </main>
+                    <main id="taskmain1">
+                        <% for (var i = 0; i < tasks.length; i++) {%>
+                            <div id="<%= tasks[i].id %>" class="<%= (user.completedDivs.includes(tasks[i].id) ? 'true' : 'false')  %>">
+                                <img src="<%= tasks[i].img %>" class="images" name="<%= tasks[i].title %>">
+                                <h4><%= tasks[i].title %></h4>
+                            </div>
+                        <% } %>
+                    </main>
+                </section>
+
+                <!--**********STORY************-->
+                <input type="radio" id="storyTab" name="mytabs">
+                <label for="storyTab">Story</label>
+                <section class="tab">
+                    <h2>Gym Progress</h2>
+                    <main class="progressMain" id="gymProgressMain">
+                        <label for="file" class="progressLabel">Progress: <span id="gymPercent"></span> /8</label>
+                        <progress id="gymProgress" max="8" value="0"></progress>
+                    </main>
+                    <main id="gymMain1">
+                        <% for (var i = 0; i < gyms.length; i++) {%>
+                            <div id="<%= gyms[i].id %>" class="<%= (user.completedDivs.includes(gyms[i].id) ? 'true' : 'false')  %>">
+                                <img src="<%= gyms[i].img %>" class="images" name="<%= gyms[i].title %>">
+                                <h4><%= gyms[i].title %></h4>
+                            </div>
+                        <% } %>
+                    </main>
+
+                    <h2>Team Star Progress</h2>
+                    <main class="progressMain" id="teamStarProgressMain">
+                        <label for="file" class="progressLabel">Progress: <span id="teamStarPercent"></span> /5</label>
+                        <progress id="teamStarProgress" max="5" value="0"></progress>
+                    </main>
+                    <main id="storyMain1">
+                        <% for (var i = 0; i < teamStar.length; i++) {%>
+                            <div id="<%= teamStar[i].id %>" class="<%= (user.completedDivs.includes(teamStar[i].id) ? 'true' : 'false')  %>">
+                                <img src="<%= teamStar[i].img %>" class="images" name="<%= teamStar[i].title %>">
+                                <h4><%= teamStar[i].title %></h4>
+                            </div>
+                        <% } %>
+                    </main>
+
+                    <h2>Titan Progress</h2>
+                    <main class="progressMain" id="titansProgressMain">
+                        <label for="file" class="progressLabel">Progress: <span id="titansPercent"></span> /5</label>
+                        <progress id="titansProgress" max="5" value="0"></progress>
+                    </main>
+                    <main id="storyMain1">
+                        <% for (var i = 0; i < titans.length; i++) {%>
+                            <div id="<%= titans[i].id %>" class="<%= (user.completedDivs.includes(titans[i].id) ? 'true' : 'false')  %>">
+                                <img src="<%= titans[i].img %>" class="images" name="<%= titans[i].title %>">
+                                <h4><%= titans[i].title %></h4>
+                            </div>
+                        <% } %>
+                    </main>
+                </section>
+                
+
+                <!--**********POKEDEX************-->
+                <input type="radio" id="pokedexTab" name="mytabs">
+                <label for="pokedexTab">Pokedex</label>
+                <section class="tab">
+                    <h2>Pokedex</h2>
+                    <main class="progressMain" id="pokedexProgressMain">
+                        <label for="file" class="progressLabel">Progress: <span id="dexPercent"></span> /400</label>
+                        <progress id="dexProgress" max="400" value="0"></progress>
+                    </main>
+                    <h4 class="note">Version Exclusives will have either a <span class="Scarlet">Scarlet</span> or <span class="Violet">Violet</span> border.</h4>
+                    <main id="pokedexMain1">
+                        <% for (var i = 0; i < pokedex.length; i++) {%>
+                            <div id="<%= pokedex[i].id %>" class="<%= (user.completedDivs.includes(pokedex[i].id) ? 'true' : 'false') %>" >
+                                <section class="<%= pokedex[i].exclusive %>">
+                                    <img src="<%= pokedex[i].img %>" class="images" name="<%= pokedex[i].title %>">
+                                    <h4><%= pokedex[i].title %></h4>
+                                    <h4 class="dexNumber">#<%= pokedex[i].dexNumber %></h4>
+                                    <!-- <% if (pokedex[i].exclusive === "Violet") { %>
+                                        <h4>Violet Only</h4>
+                                    <% } %> -->
+                                </section>
+                                
+                                
+                            </div>
+                        <% } %>
+                    </main>
+                </section>
+
+                <!--**********TOOLS************-->
+                <input type="radio" id="toolsTab" name="mytabs">
+                <label for="toolsTab">Tools</label>
+                <section class="tab">
+                    <h2>Tools</h2>
+                    <main id="toolsMain1">
+                        <h4 id="shoutOut">Big Thanks to <a href="https://www.serebii.net/scarletviolet/paldeapokedex.shtml">Serebii.net</a> for providing so much information to us for so long! I could not have made this without them!</h4>
+                        <h4 class="toolsTitle">Type Chart</h4>
+                        <section class="wrapper">
+                            <a href="https://i.pinimg.com/736x/93/55/60/935560d6f3cad2a3fa588b2fff5ababf--pokemon-type-chart-charts.jpg">
+                                <img id="typeChart" src="https://i.pinimg.com/736x/93/55/60/935560d6f3cad2a3fa588b2fff5ababf--pokemon-type-chart-charts.jpg" class="images" name="typeChart">
+                            </a>
+                            
+                            </img>
+                        </section>
+                        
+                        <h4 class="toolsTitle">Sandwich Recipes:</h4>
+                        <ul>
+                            <li><a href="https://gamingintel.com/all-sparkling-power-shiny-boosting-sandwich-recipes-pokemon-scarlet-violet/">Boost Shiny Odds</a></li>
+                            <li><a href="https://screenrant.com/every-sandwich-recipe-list-pokemon-scarlet-violet/">All Recipes</a></li>
+                        </ul>
+                        <h4 class="toolsTitle">Ominous Stakes:</h4>
+                        <ul>
+                            <li><a href="https://www.ign.com/wikis/pokemon-scarlet-violet/All_Ominous_Stake_Locations_-_How_to_Open_Shrines">Ominous Stake Locations</a></li>
+                        </ul>
+                    </main>
+                </section>
+
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+                </div>
+            
+                </div>
+
+                
+		</nav>
+    </main>
+<%- include('partials/footer') -%>
