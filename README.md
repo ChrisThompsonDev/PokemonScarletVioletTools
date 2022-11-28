@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is a fullstack application similar to [PokedexTracker](https://github.com/pokedextracker). Pokemon Scarlet and Violet have released and there is a lot to do in this game. Keeping track of the pokedex can be a bit of a chore in the game especially since the page doesnt save your alst space if you exit and come back. This tool should help with keeping track of your dex in game. 
+This is a fullstack application similar to [PokedexTracker](https://github.com/pokedextracker). Pokemon Scarlet and Violet have released and there is a lot to do in this game. Keeping track of the pokedex can be a bit of a chore in the game especially since the page doesnt save your last space if you exit and come back. This tool should help with keeping track of your dex in game. 
 
 I have also added pages for daily tasks, Gym Progress, Team Star Progress, Titans and a page for helpful links and tools. 
 
@@ -12,9 +12,9 @@ I have added a Guest Login feature for anyone that just wants to take a look wit
 
 I am currently testing this app on several different hosting sites since Heroku has announced their plans to drop their free hosting. 
 
-[Cyclic]()
+[Cyclic](https://pokemontracker.cyclic.app/)
 
-[Render]()
+~~[Render]()~~
 
 ---
 
@@ -43,8 +43,6 @@ Currently this project is still a WIP.
 I plan to add Google Auth as a login option.
 
 I need to add a "Forgot Password" feature. That will probobly require some kind of email verification. Google Auth is a higher priority.
-
-~~This is being built using Mobile First ideology. I will be updating this with media queries for landscape and larger screen sizes.~~
 
 Plan to reduce the image sizes for faster loading
 

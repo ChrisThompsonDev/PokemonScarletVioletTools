@@ -360,7 +360,7 @@ div h4 {
      width: 100%;
 }
 
-#typeChart {
+#typeChart, #sandwichesImg {
      width: 100%;
      object-fit: contain !important;
 }
