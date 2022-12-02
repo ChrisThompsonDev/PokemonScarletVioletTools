@@ -258,7 +258,7 @@ div {
 div img {
      height: 60%;
      width: 60%;
-     margin: 2% 15%;
+     /* margin: 2% 15%; */
 }
 div h4 {
      width: 100%;
@@ -360,7 +360,7 @@ div h4 {
      width: 100%;
 }
 
-#typeChart, #sandwichesImg {
+#typeChart, #sandwichesImg, #orderImg {
      width: 100%;
      object-fit: contain !important;
 }
