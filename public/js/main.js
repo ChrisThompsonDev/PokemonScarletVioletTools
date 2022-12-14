@@ -63,6 +63,7 @@ async function ChangeDivStatus(){
       console.log(err)
     }
     }
+    hideCompleted()
 }
 
 
@@ -96,17 +97,17 @@ for(var i=0;i<radios.length;i++){
 
 // Create array of all divs with the class of "true"
 let completedItems = document.querySelectorAll('.true')
-// Count number of completed items with id that contains 'tas'
+// Count number of completed items with id that contains 'true'
 let taskTracker = countCompletedItems('tas')
-// Count number of completed items with id that contains 'mus'
+// Count number of completed items with id that contains 'tas'
 let gymTracker = countCompletedItems('gym')
-// Count number of completed items with id that contains 'gyr'
+// Count number of completed items with id that contains 'gym'
 let titansTracker = countCompletedItems('tit')
-// Count number of completed items with id that contains 'fos'
+// Count number of completed items with id that contains 'tit'
 let teamStarTracker = countCompletedItems('tea')
-// Count number of completed items with id that contains 'art'
+// Count number of completed items with id that contains 'tea'
 let dexTracker = countCompletedItems('dex')
-// Count number of completed items with id that contains 'umb'
+// Count number of completed items with id that contains 'dex'
 
 //function to count the completed items in each category
 function countCompletedItems(category) {
@@ -181,10 +182,29 @@ async function clearTasks(){
     }
 }
 
+// *************** HIDE COMPLETED CHECKBOX ************
+// grab checkbox
+//when clicked, change display of class "true" to none
+let hideCheckBox = document.querySelector('#hideCompleted')
+hideCheckBox.addEventListener('change', hideCompleted)
 
+function hideCompleted() {
+  // if checked, show all true classes and uncheck the box
+  // if unchecked, hide all true classes and check the box
+  //let completed = [...completedItems].map(element => element.id.toString())
+  //let completed = document.querySelectorAll('[id^="dex"]')
+  let pokedexTab = document.querySelector('#pokedexMain1')
+  let completedDivs = pokedexTab.querySelectorAll('.true')
+  //return completedDivs
+  
+  if (hideCheckBox.checked) {
+    completedDivs.forEach(a=>a.style.display = "none")
+  } else {
+    completedDivs.forEach(a=>a.style.display = "initial")
+  }
+}
 
-
-
+hideCompleted()
 
 
 // // *************** MODAL ************

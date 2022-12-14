@@ -90,6 +90,9 @@
                         <progress id="dexProgress" max="400" value="0"></progress>
                     </main>
                     <h4 class="note">Version Exclusives will have either a <span class="Scarlet">Scarlet</span> or <span class="Violet">Violet</span> border.</h4>
+
+                    <h4 class="note"><input type="checkbox" name="checkbox" id="hideCompleted">Hide Completed</h4>
+
                     <main id="pokedexMain1">
                         <% for (var i = 0; i < pokedex.length; i++) {%>
                             <div id="<%= pokedex[i].id %>" class="<%= (user.completedDivs.includes(pokedex[i].id) ? 'true' : 'false') %>" >

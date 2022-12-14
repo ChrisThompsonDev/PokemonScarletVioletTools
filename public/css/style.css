@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+     height: 100vh;
 }
 ol, ul {
 	list-style: none;
@@ -391,6 +392,13 @@ progress {
 }
 
 /******************************************
+/* Hide Checkbox
+/*******************************************/
+#hideCompleted {
+     align-items: center;
+}
+
+/******************************************
 /* LAYOUT
 /*******************************************/
 #collectionText, #percent {
@@ -410,7 +418,13 @@ progress {
      font-size: 2rem;
 }
 
-
+/* .navBar {
+     height: 90%;
+} */
+#pokedexMain1 {
+     height: 45rem;
+     overflow-y: auto;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
