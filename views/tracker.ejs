@@ -30,8 +30,135 @@
                 <input type="radio" id="storyTab" name="mytabs">
                 <label for="storyTab">Story</label>
                 <section class="tab">
-                    <h2>Gym Progress</h2>
-                    <main class="progressMain" id="gymProgressMain">
+                    <h2>Story Progress</h2>
+                    <section class="progressBars">
+                        <main class="progressStory" id="gymProgressMain">
+                            <label for="file" class="progressLabelStory">Gyms:</label>
+                            <label class="counter"> <span class="percent" id="gymPercent"></span> /8</label>
+                            <progress id="gymProgress" max="8" value="0"></progress>
+                        </main>
+                        <main class="progressStory" id="teamStarProgressMain">
+                            <label for="file" class="progressLabelStory">Team Star: </label>
+                            <label class="counter"><span class="percent" id="teamStarPercent"></span> /5</label>
+                            <progress id="teamStarProgress" max="5" value="0"></progress>
+                        </main>
+                        <main class="progressStory" id="titansProgressMain">
+                            <label for="file" class="progressLabelStory">Titans: </label>
+                            <label class="counter"><span class="percent" id="titansPercent"></span> /5</label>
+                            <progress id="titansProgress" max="5" value="0"></progress>
+                        </main>
+                    </section>
+
+                    <p id="storyNote">Note: The story can be played in whatever order you like. The order below is by level as the game does not scale. This is the "Suggested" order to play the game.</p>
+
+                    <main id="story">
+                        <div id="gymcortondo" class="<%= (user.completedDivs.includes('gymcortondo') ? 'true' : 'false')  %>">
+                            <img src="images/cortondo.png" class="images" name="01 - Cortondo">
+                            <h4>01 - Cortondo</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="titanKlawf" class="<%= (user.completedDivs.includes('titanKlawf') ? 'true' : 'false')  %>">
+                            <img src="images/stonyCliffTitan.png" class="images" name="02 - Stony Cliff Titan">
+                            <h4>02 - Stony Cliff Titan</h4>
+                        </div>
+
+                        <div id="gymartazon" class="<%= (user.completedDivs.includes('gymartazon') ? 'true' : 'false')  %>">
+                            <img src="images/artazon.png" class="images" name="03 - Artazon">
+                            <h4>03 - Artazon</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="titanBombirdier" class="<%= (user.completedDivs.includes('titanBombirdier') ? 'true' : 'false')  %>">
+                            <img src="images/openSkyTitan.png" class="images" name="04 - Open Sky Titan">
+                            <h4>04 - Open Sky Titan</h4>
+                        </div>
+
+                        <div id="teamStarGiacomo" class="<%= (user.completedDivs.includes('teamStarGiacomo') ? 'true' : 'false')  %>">
+                            <img src="images/giacomo.png" class="images" name="05 - Giacomo">
+                            <h4>05 - Giacomo</h4>
+                            <h4>Team Star</h4>
+                        </div>
+
+                        <div id="gymlevincia" class="<%= (user.completedDivs.includes('gymlevincia') ? 'true' : 'false')  %>">
+                            <img src="images/levincia.png" class="images" name="06 - Levincia">
+                            <h4>06 - Levincia</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="teamStarMela" class="<%= (user.completedDivs.includes('teamStarMela') ? 'true' : 'false')  %>">
+                            <img src="images/mela.png" class="images" name="07 - Mela">
+                            <h4>07 - Mela</h4>
+                            <h4>Team Star</h4>
+                        </div>
+
+                        <div id="titanOrthworm" class="<%= (user.completedDivs.includes('titanOrthworm') ? 'true' : 'false')  %>">
+                            <img src="images/lurkingSteelTitan.png" class="images" name="08 - Lurking Steel Titan">
+                            <h4>08 - Lurking Steel Titan</h4>
+                        </div>
+
+                        <div id="gymcascarrafa" class="<%= (user.completedDivs.includes('gymcascarrafa') ? 'true' : 'false')  %>">
+                            <img src="images/cascarrafa.png" class="images" name="09 - Cascarrafa">
+                            <h4>09 - Cascarrafa</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="teamStarAtticus" class="<%= (user.completedDivs.includes('teamStarAtticus') ? 'true' : 'false')  %>">
+                            <img src="images/atticus.png" class="images" name="10 - Atticus">
+                            <h4>10 - Atticus</h4>
+                            <h4>Team Star</h4>
+                        </div>
+
+                        <div id="gymmedali" class="<%= (user.completedDivs.includes('gymmedali') ? 'true' : 'false')  %>">
+                            <img src="images/medali.png" class="images" name="11 - Medali">
+                            <h4>11 - Medali</h4>
+                            <h4>Gym</h4>
+                        </div>
+                        <div id="gymmontenevera" class="<%= (user.completedDivs.includes('gymmontenevera') ? 'true' : 'false')  %>">
+                            <img src="images/montenevera.png" class="images" name="12 - Montenevera">
+                            <h4>12 - Montenevera</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="titanTuskTreads" class="<%= (user.completedDivs.includes('titanTuskTreads') ? 'true' : 'false')  %>">
+                            <img src="images/quakingEarthTitan.png" class="images" name="13 - Quaking Earth Titan">
+                            <h4>13 - Quaking Earth Titan</h4>
+                        </div>
+                        
+                        <div id="gymalfornada" class="<%= (user.completedDivs.includes('gymalfornada') ? 'true' : 'false')  %>">
+                            <img src="images/alfornada.png" class="images" name="14 - Alfornada">
+                            <h4>14 - Alfornada</h4>
+                            <h4>Gym</h4>
+                        </div>
+                        <div id="gymglaseado" class="<%= (user.completedDivs.includes('gymglaseado') ? 'true' : 'false')  %>">
+                            <img src="images/glaseado.png" class="images" name="15 - Glaseado">
+                            <h4>15 - Glaseado</h4>
+                            <h4>Gym</h4>
+                        </div>
+
+                        <div id="teamStarOrtega" class="<%= (user.completedDivs.includes('teamStarOrtega') ? 'true' : 'false')  %>">
+                            <img src="images/ortega.png" class="images" name="16 - Ortega">
+                            <h4>16 - Ortega</h4>
+                            <h4>Team Star</h4>
+                        </div>
+
+                        <div id="titanDodonzo" class="<%= (user.completedDivs.includes('titanDodonzo') ? 'true' : 'false')  %>">
+                            <img src="images/falseDragon.png" class="images" name="17 - False Dragon">
+                            <h4>17 - False Dragon Titan</h4>
+                        </div>
+
+                        <div id="teamStarEri" class="<%= (user.completedDivs.includes('teamStarEri') ? 'true' : 'false')  %>">
+                            <img src="images/eri.png" class="images" name="18 - Eri">
+                            <h4>18 - Eri</h4>
+                            <h4>Team Star</h4>
+                        </div>
+                    </main>
+
+
+
+
+
+<!--                     <main class="progressMain" id="gymProgressMain">
                         <label for="file" class="progressLabel">Progress: <span id="gymPercent"></span> /8</label>
                         <progress id="gymProgress" max="8" value="0"></progress>
                     </main>
@@ -42,9 +169,9 @@
                                 <h4><%= gyms[i].title %></h4>
                             </div>
                         <% } %>
-                    </main>
+                    </main> -->
 
-                    <h2>Team Star Progress</h2>
+<!--                     <h2>Team Star Progress</h2>
                     <main class="progressMain" id="teamStarProgressMain">
                         <label for="file" class="progressLabel">Progress: <span id="teamStarPercent"></span> /5</label>
                         <progress id="teamStarProgress" max="5" value="0"></progress>
@@ -56,9 +183,9 @@
                                 <h4><%= teamStar[i].title %></h4>
                             </div>
                         <% } %>
-                    </main>
+                    </main> -->
 
-                    <h2>Titan Progress</h2>
+<!--                     <h2>Titan Progress</h2>
                     <main class="progressMain" id="titansProgressMain">
                         <label for="file" class="progressLabel">Progress: <span id="titansPercent"></span> /5</label>
                         <progress id="titansProgress" max="5" value="0"></progress>
@@ -70,7 +197,7 @@
                                 <h4><%= titans[i].title %></h4>
                             </div>
                         <% } %>
-                    </main>
+                    </main> -->
 
                     <main class="wrapper">
                         <a href="https://twitter.com/wyrmwynd/status/1593831151784837120?s=20&t=DI09NlkDSARUEMmW2cSYvg">
@@ -133,13 +260,19 @@
 
                             <li><a href="https://cecilbowen.github.io/pokemon-sandwich-simulator/">Sandwich Recipe Simulator</a></li>
 
-                            <li><a href="https://twitter.com/SilentDestroySR/status/1596430687091167235?s=20&t=BaqdeOUtC4PyXi5ShSPVHw">Shiny Sandwich Recipe Chart by @SilentDestroySR</a></li>
+                            <!-- <li><a href="https://twitter.com/SilentDestroySR/status/1596430687091167235?s=20&t=BaqdeOUtC4PyXi5ShSPVHw">Shiny Sandwich Recipe Chart by @SilentDestroySR</a></li> -->
+                            <li><a href="https://twitter.com/SilentDestroySR/status/1597664770991468545?s=20">Shiny Sandwich Recipe Chart by @SilentDestroySR</a></li>
                             
                         </ul>
 
-                        <section class="wrapper">
+                        <!-- <section class="wrapper">
                             <a href="https://pbs.twimg.com/media/FieoZvCXEAAX0qr?format=jpg&name=4096x4096">
-                                <img id="sandwichesImg" src="https://pbs.twimg.com/media/FieoZvCXEAAX0qr?format=jpg&name=4096x4096" class="images">
+                                <img id="sandwichesImg" src="https://pbs.twimg.com/media/FiwLoRtXoAE1BNw?format=jpg&name=4096x4096" class="images">
+                            </a>
+                        </section> -->
+                        <section class="wrapper">
+                            <a href="https://twitter.com/SilentDestroySR/status/1597664770991468545?s=20">
+                                <img id="sandwichesImg" src="https://pbs.twimg.com/media/FiwLoRtXoAE1BNw?format=jpg&name=4096x4096" class="images">
                             </a>
                         </section>
 

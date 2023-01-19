@@ -209,6 +209,11 @@ a {
      text-align: center;
 }
 
+#storyNote {
+     text-align: center;
+
+}
+
 /* ************            ************* */
 #clear {
      width: 100%;
@@ -259,6 +264,7 @@ div {
 div img {
      height: 60%;
      width: 60%;
+     border-radius: 15%;
      /* margin: 2% 15%; */
 }
 div h4 {
@@ -297,6 +303,10 @@ div h4 {
 
 #shoutOut {
      text-align: center;
+}
+
+#story div h4 {
+     font-size: 1.4rem;
 }
 
 /* ************SECTION TABS************* */
@@ -364,6 +374,7 @@ div h4 {
 #typeChart, #sandwichesImg, #orderImg {
      width: 100%;
      object-fit: contain !important;
+     border-radius: 5%;
 }
 
 li {
@@ -373,22 +384,38 @@ li {
 
 /* ************PROGRESS BARS************* */
 
+.progressBars {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+}
 
-.progressMain {
+.progressStory {
      display: flex;
      justify-content: center;
      text-align: center;
-     
+     width: 30%;
 }
 .progressLabel {
      background: none !important;
      width: 100%;
+     text-align: center;
+}
+.progressLabelStory {
+     background: none !important;
 }
 progress {
      margin-top: .25rem;
      margin-bottom: 1rem;
      height: 5rem;
      width: 35rem;
+}
+.percent {
+     width: 100%;
+}
+label.counter {
+     background: none;
 }
 
 /******************************************
