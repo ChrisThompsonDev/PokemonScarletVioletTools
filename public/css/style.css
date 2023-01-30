@@ -293,9 +293,7 @@ main {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-around;
-     width: 100%;
-     margin-top: 1rem;
-
+     gap: 1rem;
 }
 
 #collectionText {
@@ -573,7 +571,7 @@ label.counter {
 
 @media (min-width: 1100px) {
      body {
-          /* padding: 0 8%; */
+          padding: 0 10%;
      }
      div {
           width: 20rem;
@@ -591,6 +589,12 @@ label.counter {
      }
      #clearTasks {
           width: 20%;
+     }
+     .wrapper {
+          width: 60%;
+     }
+     #toolsMain1 ul {
+          width: 100%;
      }
 }
 
