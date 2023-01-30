@@ -124,21 +124,18 @@ a {
      
 }
 footer {
-     padding: 0 1.5rem;
+     padding: 1.5rem;
      background: rgba(146, 33, 245, 0.708);
      box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-}
-
-
-footer {
      font-size: 2rem;
      color: rgb(243, 243, 243);
-     padding: 1.5rem;
-     width: 100%;
      display: flex;
      flex-direction: column;
 
+     bottom: 0;
+
 }
+
 #footerDivTop {
      display: flex;
      flex-direction: row;
@@ -372,6 +369,9 @@ div h4 {
 #story div h4 {
      font-size: 1.4rem;
 }
+#mainStoryWrapper {
+     margin-top: 2rem;
+}
 
 /* ************SECTION TABS************* */
 .mytabs {
@@ -432,8 +432,9 @@ div h4 {
 }
 
 .wrapper {
-     display: inline-block;
+     /* display: inline-block; */
      width: 100%;
+     margin: 0 auto;
 }
 
 #typeChart, #sandwichesImg, #orderImg {
@@ -516,12 +517,13 @@ label.counter {
 
 #mainBody {
      position: relative;
-     min-height: 70vh;
+     min-height: 77vh;
 }
 #pokedexMain1 {
-     height: 55rem;
+     height: 75rem;
      overflow-y: auto;
 }
+
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -595,6 +597,16 @@ label.counter {
      }
      #toolsMain1 ul {
           width: 100%;
+     }
+     #story, #orderMap {
+          width: 48%;
+     }
+     #orderImg {
+          vertical-align: auto;
+     }
+     #mainStoryWrapper {
+          display: flex;
+          flex-direction: row;
      }
 }
 

@@ -1,4 +1,4 @@
-![Screenshot](/public/images/)
+![Screenshot](/public/images/PokemonSVTracker.gif)
 
 # Introduction
 
@@ -10,11 +10,13 @@ I have also added pages for daily tasks, Gym Progress, Team Star Progress, Titan
 
 I have added a Guest Login feature for anyone that just wants to take a look without making an account!
 
-I am currently testing this app on several different hosting sites since Heroku has announced their plans to drop their free hosting. 
+I am currently testing this app on several different hosting sites since Heroku has dropped their free hosting. If it does not work, try one of the other links. You only need to make one login.
 
-[Cyclic](https://pokemontracker.cyclic.app/)
+[Render](https://pokemonsvtracker.onrender.com/)
 
-~~[Render]()~~
+[Cyclic](https://pokemontracker.cyclic.app/) - Cyclic has a lot of downtime. If it does not work. Try again in a minute.
+
+
 
 ---
 
@@ -45,6 +47,8 @@ I plan to add Google Auth as a login option.
 I need to add a "Forgot Password" feature. That will probobly require some kind of email verification. Google Auth is a higher priority.
 
 Plan to reduce the image sizes for faster loading
+
+Will be adding modals that pop up when holding a click on a pokemon. The modal will have information on how to acquire the pokemon, how to evolve, best movesets and type weaknesses. 
 
 ## Other Projects
 Also check out other projects of mine like this one!:
