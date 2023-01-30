@@ -79,13 +79,17 @@ html {
      background-attachment: fixed;
 }
 body {
-     padding: 1rem .5rem;
+     /* padding: 1rem .5rem; */
+     background:rgba(168, 167, 167, 0.503);
      font-family: 'Oswald', sans-serif;
-     background: rgb(255,36,0);
-     background: linear-gradient(90deg, rgba(255,36,0,0.60) 0%, rgba(143,0,255,0.60) 100%);
+     /* box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3); */
 }
 header {
      padding: 0 1.5rem;
+     background: rgba(245, 61, 33, 0.708);
+     /* background: linear-gradient(90deg, rgba(255,36,0,0.60) 0%, rgba(143,0,255,0.60) 100%); */
+     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+     
 }
 .topBar {
      /* background: rgb(146,227,252);
@@ -119,7 +123,69 @@ a {
      font-size: 2rem;
      
 }
+footer {
+     padding: 0 1.5rem;
+     background: rgba(146, 33, 245, 0.708);
+     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
 
+
+footer {
+     font-size: 2rem;
+     color: rgb(243, 243, 243);
+     padding: 1.5rem;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+
+}
+#footerDivTop {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 100%;
+     /* border: 1px solid black; */
+}
+#footerTopLeft, #footerTopMid {
+/*      border-left: 1px solid rgb(243, 243, 243);
+     border-right: 1px solid rgb(243, 243, 243); */
+     /* padding: 1.5rem; */
+     width: 46%;
+     margin: 0 1%;
+}
+footer h4 {
+     margin-bottom: 1rem;
+}
+footer p, .copyright a {
+     font-size: 1.5rem;
+}
+
+#footerDivBottom {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     margin: 1.5rem 0;
+     padding: 0 10px;
+     /* border: 1px solid black; */
+}
+.copyright {
+     margin: 0 auto;
+}
+#socials {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+.fa-brands, .fa-solid {
+     color: rgb(243, 243, 243);
+     background-color: #4a4a4a;
+     padding: 1rem;
+     border-radius: 50%;
+     width: 4rem;
+     height: 4rem;
+     text-align: center;
+}
 
 /* ************ Index ***************** */
 #main1 {
@@ -318,6 +384,7 @@ div h4 {
      margin: 10px auto;
      padding: 1rem;
      font-size: 2rem;
+     height: fit-content;
 }
 .mytabs input[type="radio"] {
      display: none;
@@ -383,12 +450,17 @@ li {
 }
 
 /* ************PROGRESS BARS************* */
-
-.progressBars {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: nowrap;
-     justify-content: space-around;
+.progressLabelStory {
+     background: none !important;
+     width: 100%;
+}
+.progressLabel {
+     background: none !important;
+     width: 100%;
+     text-align: center;
+}
+label.counter {
+     background: none;
 }
 
 .progressStory {
@@ -397,26 +469,35 @@ li {
      text-align: center;
      width: 30%;
 }
-.progressLabel {
-     background: none !important;
-     width: 100%;
-     text-align: center;
+
+.progressBars {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-around;
 }
-.progressLabelStory {
-     background: none !important;
-}
-progress {
-     margin-top: .25rem;
+
+#gymProgress, #teamStarProgress, #titansProgress {
+     /* margin-top: .25rem;
      margin-bottom: 1rem;
-     height: 5rem;
-     width: 35rem;
+     height: 5rem; */
+     width: 90%;
 }
+/* 
+#titansProgress ::-moz-progress-bar {
+     background-color: red;
+     width: 30%;
+}
+
+
+
+
+
+
 .percent {
      width: 100%;
 }
-label.counter {
-     background: none;
-}
+ */
 
 /******************************************
 /* Hide Checkbox
@@ -433,23 +514,14 @@ label.counter {
      font-size: 2rem;
 }
 
-#footerDiv {
-     display: flex;
-     justify-content: flex-end;
-     align-items: right;
-     width: 100%;
-     margin: 30px 0;
-     padding: 0 10px;
-}
-#footerDiv p {
-     font-size: 2rem;
-}
 
-/* .navBar {
-     height: 90%;
-} */
+
+#mainBody {
+     position: relative;
+     min-height: 70vh;
+}
 #pokedexMain1 {
-     height: 45rem;
+     height: 55rem;
      overflow-y: auto;
 }
 
@@ -458,7 +530,7 @@ label.counter {
 /*******************************************/
 @media (min-width: 600px) {
      body {
-          padding: 0 8%;
+          /* padding: 0 8%; */
      }
      div {
           width: 10rem;
@@ -477,9 +549,9 @@ label.counter {
 }
 
 @media (min-width: 800px) {
-     body {
+     /* body {
           padding: 0 8%;
-     }
+     } */
      div {
           width: 20rem;
           height: 20rem;
@@ -501,7 +573,7 @@ label.counter {
 
 @media (min-width: 1100px) {
      body {
-          padding: 0 8%;
+          /* padding: 0 8%; */
      }
      div {
           width: 20rem;
