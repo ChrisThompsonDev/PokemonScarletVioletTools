@@ -49,7 +49,7 @@ app.use('/tracker', trackerRoutes)
     console.log(`Server is running on Port ${process.env.PORT}, you better catch it!`)
 })  */
 
-//Connect to the database before listening
+//Connect to the database before listening to prevent crashes on Cyclic
 connectDB().then(() => {
   app.listen(PORT, () => {
       console.log("listening for requests");

@@ -12,9 +12,10 @@ I have added a Guest Login feature for anyone that just wants to take a look wit
 
 I am currently testing this app on several different hosting sites since Heroku has dropped their free hosting. If it does not work, try one of the other links. You only need to make one login.
 
-[Render](https://pokemonsvtracker.onrender.com/)
 
-[Cyclic](https://pokemontracker.cyclic.app/) - Cyclic has a lot of downtime. If it does not work. Try again in a minute.
+[Cyclic](https://pokemontracker.cyclic.app/)
+
+[Render](https://pokemonsvtracker.onrender.com/) - Tends to load slowly after a lot of downtime
 
 
 
