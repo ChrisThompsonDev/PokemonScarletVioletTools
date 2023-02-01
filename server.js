@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 8000
 const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
@@ -10,12 +11,14 @@ const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const trackerRoutes = require('./routes/tracker')
 
+
 require('dotenv').config({path: '.env'})
 
 // Passport config
 require('./config/passport')(passport)
 
-connectDB()
+/* connectDB() */
+
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -42,6 +45,13 @@ app.use(flash())
 app.use('/', mainRoutes)
 app.use('/tracker', trackerRoutes)
  
-app.listen(process.env.PORT, ()=>{
+/* app.listen(process.env.PORT, ()=>{
     console.log(`Server is running on Port ${process.env.PORT}, you better catch it!`)
-})  
+})  */
+
+//Connect to the database before listening
+connectDB().then(() => {
+  app.listen(PORT, () => {
+      console.log("listening for requests");
+  })
+})
