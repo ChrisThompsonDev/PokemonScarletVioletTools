@@ -232,12 +232,7 @@ footer p, .copyright a {
      transform: translate(2px, 2px);
 }
 
-@media (min-width: 768px) {
-     #loginButton, #signupButton {
-     min-width: 120px;
-     padding: 0 25px;
-     }
-}  
+
 /* ************ Login ***************** */
 
 
@@ -282,8 +277,8 @@ footer p, .copyright a {
      width: 100%;
 }
 #clearTasks {
-     width: 50%;
-     height: 15%;
+     min-width: 4rem;
+     padding: 0 .8rem;
      font-size: 2rem;
 }
 main {
@@ -528,6 +523,21 @@ label.counter {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+/* @media (min-width: 768px) {
+     #loginButton, #signupButton {
+     min-width: 120px;
+     padding: 0 25px;
+     }
+}  
+
+@media (min-width: 1100px) {
+     #loginButton, #signupButton {
+     min-width: 4rem;
+     padding: 0 .8rem;
+     }
+}  */
 @media (min-width: 600px) {
      body {
           /* padding: 0 8%; */
@@ -543,9 +553,6 @@ label.counter {
      div h4 {
           font-size: .7em;
      }
-     #clearTasks {
-          width: 40%;
-     }
 }
 
 @media (min-width: 800px) {
@@ -553,12 +560,12 @@ label.counter {
           padding: 0 8%;
      } */
      div {
-          width: 20rem;
-          height: 20rem;
+          width: 15rem;
+          height: 15rem;
      }
      div img {
-          width: 7em;
-          height: 7em;
+          width: 5em;
+          height: 5em;
      }
      div h4 {
           font-size: 1em;
@@ -566,31 +573,25 @@ label.counter {
      #headerImg {
           width: 15rem;
      }
-     #clearTasks {
-          width: 35%;
-     }
 }
 
 @media (min-width: 1100px) {
      body {
           padding: 0 10%;
      }
-     div {
+/*      div {
           width: 20rem;
           height: 20rem;
      }
      div img {
           width: 7em;
           height: 7em;
-     }
+     } */
      div h4 {
           font-size: 1em;
      }
      #headerImg {
           width: 20rem;
-     }
-     #clearTasks {
-          width: 20%;
      }
      .wrapper {
           width: 60%;
